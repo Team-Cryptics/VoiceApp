@@ -7,18 +7,22 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 import java.util.List;
 
 public class StartRunActivity extends AppCompatActivity {
 
     Button bt1;
+    EditText et1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start_run);
 
         bt1=(Button)findViewById(R.id.button);
+        et1 = (EditText)findViewById(R.id.editText);
         bt1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -53,6 +57,7 @@ public class StartRunActivity extends AppCompatActivity {
             String spokenText = results.get(0);
             // Do something with spokenText
             Log.i("TAG",spokenText);
+            et1.setText(spokenText);
 
         }
         super.onActivityResult(requestCode, resultCode, data);

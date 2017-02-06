@@ -10,30 +10,24 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.samarthgupta.voiceapp.StartRunActivity">
 
-    <Button
-        android:text="Speech to text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/button" />
-
-    <Button
-        android:text="Text to speech"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="130dp"
-        android:id="@+id/button2"
-        android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/button" />
-
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:ems="10"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="60dp"
+        android:layout_marginBottom="160dp"
         android:id="@+id/editText"
-        android:hint="Enter the text " />
+        android:hint="Enter the text "
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="55dp" />
+
+    <Button
+        android:text="Speech to text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button"
+        android:layout_above="@+id/editText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="113dp" />
 </RelativeLayout>
